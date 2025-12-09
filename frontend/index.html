@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socio App | Code Alpha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="logo">
+        <span class="logo__dot"></span>
+        Socio App
+      </div>
+      <div class="top-actions">
+        <button id="openUserModal" class="ghost">Create user</button>
+        <button id="deleteUser" class="ghost danger">Delete user</button>
+        <div class="active-user">
+          <label for="activeUser">Active user</label>
+          <select id="activeUser"></select>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>New post</h2>
+        <form id="postForm" class="stack">
+          <textarea id="postContent" placeholder="Say something..." rows="3" required></textarea>
+          <input type="url" id="postImage" placeholder="Image URL (optional)" />
+          <button type="submit">Share</button>
+          <small id="postHint">Choose an active user first.</small>
+        </form>
+      </section>
+
+      <section class="feed">
+        <div class="feed__header">
+          <h2>Following</h2>
+          <div class="feed__tabs" id="feedTabs">
+            <button class="pill pill--active" data-filter="following">Following</button>
+            <button class="pill" data-filter="featured">Featured</button>
+            <button class="pill" data-filter="popular">Popular</button>
+          </div>
+        </div>
+        <div class="stories">
+          <div class="story story--add">+</div>
+          <div id="stories" class="stories__rail"></div>
+        </div>
+        <div id="posts"></div>
+      </section>
+    </main>
+
+    <div id="userModal" class="modal">
+      <div class="modal__backdrop"></div>
+      <div class="modal__card">
+        <div class="modal__header">
+          <h3>Create user</h3>
+          <button id="closeUserModal" class="icon-btn" aria-label="Close">×</button>
+        </div>
+        <form id="userForm" class="stack">
+          <input type="text" id="userName" placeholder="Name" required />
+          <input type="url" id="userAvatar" placeholder="Avatar URL (optional)" />
+          <textarea id="userBio" placeholder="Bio" rows="2"></textarea>
+          <button type="submit">Create profile</button>
+        </form>
+      </div>
+    </div>
+
+    <template id="postTemplate">
+      <article class="post">
+        <div class="post__header">
+          <img class="avatar" />
+          <div>
+            <div class="name"></div>
+            <div class="meta"></div>
+          </div>
+          <div class="post__actions">
+            <button class="follow"></button>
+            <button class="delete-post danger ghost">Delete</button>
+          </div>
+        </div>
+        <p class="content"></p>
+        <img class="post-image" />
+        <div class="actions">
+          <button class="like"></button>
+          <span class="counts"></span>
+        </div>
+        <div class="comments">
+          <form class="comment-form">
+            <input type="text" class="comment-text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+          <div class="comment-list"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+

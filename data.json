@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Alex",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "bio": "Frontend tinkerer",
+      "followers": [
+        "u2",
+        "3mPCOm"
+      ],
+      "following": [
+        "u2"
+      ]
+    },
+    {
+      "id": "u2",
+      "name": "Jamie",
+      "avatar": "https://i.pravatar.cc/150?img=3",
+      "bio": "Back-end enthusiast",
+      "followers": [
+        "u1"
+      ],
+      "following": [
+        "u1"
+      ]
+    },
+    {
+      "id": "3mPCOm",
+      "name": "sri",
+      "avatar": "",
+      "bio": "trust processes",
+      "followers": [],
+      "following": [
+        "u1"
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": "p1",
+      "userId": "u1",
+      "content": "Excited to ship this mini social app!",
+      "image": "",
+      "createdAt": "2025-12-09T08:09:24.708Z",
+      "likes": [
+        "u2",
+        "u1"
+      ]
+    },
+    {
+      "id": "p2",
+      "userId": "u2",
+      "content": "API layer ready. Time for UI polish.",
+      "image": "",
+      "createdAt": "2025-12-09T08:09:24.708Z",
+      "likes": [
+        "u1"
+      ]
+    },
+    {
+      "id": "bozAGn6-",
+      "userId": "u1",
+      "content": "be bold",
+      "image": "https://www.facebook.com/Bold.milano/",
+      "createdAt": "2025-12-09T08:11:18.310Z",
+      "likes": [
+        "u1"
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": "c1",
+      "postId": "p1",
+      "userId": "u2",
+      "text": "Looks great!",
+      "createdAt": "2025-12-09T08:09:24.708Z"
+    },
+    {
+      "id": "c2",
+      "postId": "p2",
+      "userId": "u1",
+      "text": "Let’s gooo 🚀",
+      "createdAt": "2025-12-09T08:09:24.708Z"
+    },
+    {
+      "id": "N-JsEO-7QU",
+      "postId": "p1",
+      "userId": "u1",
+      "text": "hi",
+      "createdAt": "2025-12-09T08:09:41.906Z"
+    },
+    {
+      "id": "qcgwqPa3y_",
+      "postId": "p1",
+      "userId": "u2",
+      "text": "hi",
+      "createdAt": "2025-12-09T08:09:53.579Z"
+    },
+    {
+      "id": "D6cGFjU0vj",
+      "postId": "bozAGn6-",
+      "userId": "u1",
+      "text": "super",
+      "createdAt": "2025-12-09T08:11:27.933Z"
+    }
+  ]
+}
